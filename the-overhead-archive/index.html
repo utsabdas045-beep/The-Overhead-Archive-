@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Overhead Archive — A Photo Journal by Utsab Das</title>
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" href="favicon.png" type="image/png">
+<meta name="description" content="The Overhead Archive — a literary photo journal by Utsab Das, inspired by Percy Bysshe Shelley's 'The Cloud'.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Archivo+Narrow:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Paper grain overlay, sits above everything -->
+<div class="grain" aria-hidden="true"></div>
+
+<!-- Scroll progress -->
+<div class="scroll-progress" aria-hidden="true"><span id="scrollBar"></span></div>
+
+<!-- Custom cursor (desktop only, purely decorative) -->
+<div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+
+<!-- ============ LOADING SCREEN ============ -->
+<div class="loader" id="loader" role="status" aria-live="polite">
+  <div class="loader-sky">
+    <div class="loader-cloud c1"></div>
+    <div class="loader-cloud c2"></div>
+    <div class="loader-cloud c3"></div>
+  </div>
+  <div class="loader-content">
+    <p class="loader-kicker">A PHOTO JOURNAL BY UTSAB DAS</p>
+    <h1 class="loader-title">The&nbsp;Overhead<br>Archive</h1>
+    <p class="loader-counter"><span id="loaderLabel">ARCHIVING THE SKY</span> — <span id="loaderCount">01</span>/<span id="loaderTotal">09</span></p>
+    <div class="loader-rule"><span id="loaderFill"></span></div>
+  </div>
+</div>
+
+<!-- ============ NAVIGATION ============ -->
+<header class="site-nav" id="siteNav">
+  <a href="#hero" class="nav-mark" aria-label="Return to top">U·D</a>
+  <nav aria-label="Primary">
+    <ul>
+      <li><a href="#archive">Archive</a></li>
+      <li><a href="#plates">Plates</a></li>
+      <li><a href="#poem">Poem</a></li>
+      <li><a href="#about">About</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="hero">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="archive">
+    <div class="hero-frame">
+      <p class="hero-eyebrow">Vol. I — A Field Record of Ordinary Skies</p>
+      <h1 class="hero-title">The Overhead<br>Archive</h1>
+      <p class="hero-subtitle">A photo journal by Utsab Das</p>
+    </div>
+    <div class="hero-photo">
+      <img src="images/plate-01.jpg" alt="A pale blue sky scattered with cloud, seen past the black silhouette of a rooftop antenna." loading="eager">
+    </div>
+    <button class="scroll-cue" id="scrollCue" aria-label="Scroll to begin reading">
+      <span>Begin reading</span>
+      <span class="scroll-cue-line"></span>
+    </button>
+  </section>
+
+  <!-- ============ OPENING NOTE ============ -->
+  <section class="opening">
+    <div class="opening-inner">
+      <p class="opening-drop">Every day, without asking, the sky rearranges itself overhead — and almost no one looks up long enough to notice. This archive is an attempt to look up anyway: nine plates, shot between one ordinary sunrise and the next, kept in the order they were seen.</p>
+      <p class="opening-note">The sequence borrows its voice from Percy Bysshe Shelley's <em>The Cloud</em> — not to illustrate the poem, but to stand beside it, two records of the same restless thing.</p>
+    </div>
+  </section>
+
+  <!-- ============ PLATES / PHOTO JOURNAL ============ -->
+  <section class="plates" id="plates">
+    <div class="plates-head">
+      <p class="section-label">Plates I–IX</p>
+      <h2>The Sequence</h2>
+    </div>
+    <div id="platesContainer"><!-- injected by js/main.js --></div>
+  </section>
+
+  <!-- ============ POEM ============ -->
+  <section class="poem-section" id="poem">
+    <div class="poem-frame">
+      <p class="section-label">From the Book</p>
+      <h2 class="poem-title">From&nbsp;The&nbsp;Cloud</h2>
+      <div class="poem-body">
+        <p>I wield the flail of the lashing hail,<br>
+        And bind the Sun's throne with a burning zone.<br>
+        I bring fresh showers for the thirsting flowers,<br>
+        And then again I dissolve it in rain.<br>
+        Sublime on the towers of my skiey bowers,<br>
+        From my wings are shaken the dews that waken.<br>
+        The sanguine Sunrise leaps on the back of my sailing rack,<br>
+        As on the jag of a mountain crag.<br>
+        That orbed maiden with white fire laden,<br>
+        Whom mortals call the Moon,<br>
+        Glides glimmering o'er my fleece-like floor,<br>
+        By the midnight breezes strewn.</p>
+      </div>
+      <p class="poem-attribution">By Percy Bysshe Shelley</p>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section class="about" id="about">
+    <div class="about-grid">
+      <div class="about-col">
+        <p class="section-label">About the Archive</p>
+        <h2>The Overhead Archive</h2>
+        <p>A photo journal by Utsab Das, gathering nine photographs of the sky taken in passing — over rooftops, roads, and temple spires — and arranging them alongside Percy Bysshe Shelley's <em>The Cloud</em>.</p>
+        <p>The pairing is not illustration but companionship: a nineteenth-century voice for the cloud, and a twenty-first-century record of the same sky, still doing what it has always done.</p>
+      </div>
+      <div class="about-col about-signature">
+        <p class="signature-mark">U.D.</p>
+        <p class="signature-line">Utsab Das</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ ENDING ============ -->
+<footer class="site-end">
+  <button class="sky-symbol" id="skySymbol" aria-label="A small mark in the margin">
+    <svg viewBox="0 0 40 40" width="22" height="22" aria-hidden="true">
+      <circle cx="20" cy="20" r="8" fill="currentColor"/>
+    </svg>
+  </button>
+  <p class="end-line">The End of the Sky</p>
+  <p class="end-sub">A photo journal by Utsab Das</p>
+  <div class="end-rule"></div>
+  <p class="credits">Photographs and text &copy; Utsab Das. Poem excerpt from <em>The Cloud</em> by Percy Bysshe Shelley (1820), in the public domain.</p>
+  <p class="credits-return"><a href="#hero" id="returnToSky">Return to the sky ↑</a></p>
+</footer>
+
+<!-- ============ FULLSCREEN VIEWER ============ -->
+<div class="viewer" id="viewer" role="dialog" aria-modal="true" aria-label="Photograph viewer" hidden>
+  <button class="viewer-close" id="viewerClose" aria-label="Close viewer">Close</button>
+  <button class="viewer-nav viewer-prev" id="viewerPrev" aria-label="Previous photograph">&#8249;</button>
+  <figure class="viewer-figure">
+    <img id="viewerImg" src="" alt="">
+    <figcaption>
+      <span class="viewer-number" id="viewerNumber"></span>
+      <span class="viewer-caption" id="viewerCaption"></span>
+    </figcaption>
+  </figure>
+  <button class="viewer-nav viewer-next" id="viewerNext" aria-label="Next photograph">&#8250;</button>
+</div>
+
+<!-- Night-mode stars canvas for easter egg -->
+<canvas id="starsCanvas" aria-hidden="true"></canvas>
+<div class="night-message" id="nightMessage" aria-hidden="true">
+  <p>That orbed maiden with white fire laden,<br>whom mortals call the Moon…</p>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
